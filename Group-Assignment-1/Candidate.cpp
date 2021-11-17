@@ -5,9 +5,9 @@ using namespace std;
 
 class Candidate {
 
-  protected:
+  private:
 
-    // Data Needed to Register A Candidate (Protected) - This data should not need to be changed after object creation.
+    // Data Needed to Register A Candidate (Private) - This data should not need to be changed after object creation.
 
     int m_candidate_id;                       // Candidate's College ID (Unique)
     string m_candidate_name;                  // Candidate's Name
@@ -17,8 +17,8 @@ class Candidate {
     string m_candidate_branch;                // Candidate's Branch / Specialisation
     int m_candidate_graduation_year;          // Candidate's Graduation Year
     int m_candidate_active_backlogs_count;    // Candidate's Active Backlog Count
-    float m_candidate_grade_standard_12;      // Candidate's Aggregate 12th Standard Marks
     float m_candidate_grade_standard_10;      // Candidate's Aggregate 10th Standard Marks
+    float m_candidate_grade_standard_12;      // Candidate's Aggregate 12th Standard Marks
 
   public:
 
