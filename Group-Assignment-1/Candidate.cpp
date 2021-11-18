@@ -21,9 +21,9 @@ class Candidate {
     float m_candidate_grade_standard_10;                // Candidate's Aggregate 10th Standard Marks
     float m_candidate_grade_standard_12;                // Candidate's Aggregate 12th Standard Marks
 
-  public:
+  protected:
 
-    // Data Needed to Register A Candidate (Public) - This data can be updated after object creation.
+    // Data Needed to Register A Candidate (Protected) - This data can be updated after object creation.
 
     float m_candidate_cgpa;                             // Candidate's CGPA - Updated on Semester Change / Backlog Clearance 
     string m_candidate_personal_email;                  // Candidate's Personal Email - Updated on Wish
@@ -118,4 +118,58 @@ class Candidate {
       this -> m_candidate_preference_company = candidate.m_candidate_preference_company;
 
     }
+
+    // Destructor
+
+    ~Candidate() {
+
+      
+
+    }
+
+    // Private Data Member Getters
+
+    int getID() {
+      return this -> m_candidate_id;
+    }
+
+    string getName() {
+      return this -> m_candidate_name;
+    }
+
+    char getGender() {
+      return this -> m_candidate_gender;
+    }
+
+    int getAge() {
+      return this -> m_candidate_age;
+    }
+
+    string getDegree() {
+      return this -> m_candidate_degree;
+    }
+
+    string getBranch() {
+      return this -> m_candidate_branch;
+    }
+
+    int getGraduationYear() {
+      return this -> m_candidate_graduation_year;
+    }
+
+    string getCollegeEmail() {
+      return this -> m_candidate_college_email;
+    }
+
+    float getGradeStandard10() {
+      return this -> m_candidate_grade_standard_10;
+    }
+
+    float getGradeStandard12() {
+      return this -> m_candidate_grade_standard_12;
+    }
+
+    // Protected Data Member Getters & Setters
+
+    
 }
