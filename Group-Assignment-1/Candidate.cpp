@@ -30,19 +30,19 @@ class Candidate {
 
     // Data that can be Modified with Time
 
-    string m_candidate_url_github;
-    string m_candidate_url_gitlab;
-    string m_candidate_url_resume;
-    string m_candidate_url_twitter;
-    string m_candidate_url_codechef;
-    string m_candidate_url_linkedin;
-    string m_candidate_url_portfolio;
-    string m_candidate_url_hackerrank;
-    string m_candidate_url_hackerearth;
-    string m_candidate_url_interviewbit;
-    bool m_candidate_placed_status;
-    float m_candidate_preference_min_ctc;
-    string m_candidate_preference_company[];
+    string m_candidate_url_github;            // Candidate's GitHub URL (Optional)
+    string m_candidate_url_gitlab;            // Candidate's GitLab URL (Optional)
+    string m_candidate_url_resume;            // Candidate's Resume / CV URL (Optional)
+    string m_candidate_url_twitter;           // Candidate's Twitter URL (Optional)
+    string m_candidate_url_codechef;          // Candidate's CodeChef URL (Optional)
+    string m_candidate_url_linkedin;          // Candidate's LinkedIn URL (Optional)
+    string m_candidate_url_portfolio;         // Candidate's Personal Portfolio URL (Optional)
+    string m_candidate_url_hackerrank;        // Candidate's HackerRank URL (Optional)
+    string m_candidate_url_hackerearth;       // Candidate's HackerEarth URL (Optional)
+    string m_candidate_url_interviewbit;      // Candidate's InterviewBit URL (Optional)
+    bool m_candidate_placed_status;           // Candidate's Placement Status (Optional)
+    float m_candidate_preference_min_ctc;     // Candidate's Preference for Minimum CTC (Optional)
+    string m_candidate_preference_company[];  // Candidate's Preference among Companies (Optional)
 
     // Parameterised Default Constructor
 
