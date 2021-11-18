@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -115,6 +116,6 @@ class Candidate {
       this -> m_candidate_placed_status = candidate.m_candidate_placed_status;
       this -> m_candidate_preference_min_ctc = candidate.m_candidate_preference_min_ctc;
       this -> m_candidate_preference_company = candidate.m_candidate_preference_company;
-      
+
     }
 }
