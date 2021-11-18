@@ -42,8 +42,11 @@ class Candidate {
     string m_candidate_url_hackerearth;                 // Candidate's HackerEarth URL (Optional)
     string m_candidate_url_interviewbit;                // Candidate's InterviewBit URL (Optional)
     bool m_candidate_placed_status;                     // Candidate's Placement Status (Optional)
+    string m_candidate_placed_company;                  // Candidate's Placement Company (Optional)
+    float m_candidate_placed_ctc;                       // Candidate's Placement CTC (Optional)
     float m_candidate_preference_min_ctc;               // Candidate's Preference for Minimum CTC (Optional)
     vector<string> m_candidate_preference_company;      // Candidate's Preference among Companies (Optional)
+
 
     // Parameterised Default Constructor
 
@@ -82,6 +85,8 @@ class Candidate {
       this -> m_candidate_url_hackerearth = "";
       this -> m_candidate_url_interviewbit = "";
       this -> m_candidate_placed_status = false;
+      this -> m_candidate_placed_company = "";
+      this -> m_candidate_placed_ctc = 0.0;
       this -> m_candidate_preference_min_ctc = 0.0;
 
     }
@@ -114,6 +119,8 @@ class Candidate {
       this -> m_candidate_url_hackerearth = candidate.m_candidate_url_hackerearth;
       this -> m_candidate_url_interviewbit = candidate.m_candidate_url_interviewbit;
       this -> m_candidate_placed_status = candidate.m_candidate_placed_status;
+      this -> m_candidate_placed_company = candidate.m_candidate_placed_company;
+      this -> m_candidate_placed_ctc = candidate.m_candidate_placed_ctc;
       this -> m_candidate_preference_min_ctc = candidate.m_candidate_preference_min_ctc;
       this -> m_candidate_preference_company = candidate.m_candidate_preference_company;
 
@@ -171,5 +178,5 @@ class Candidate {
 
     // Protected Data Member Getters & Setters
 
-    
+
 }
