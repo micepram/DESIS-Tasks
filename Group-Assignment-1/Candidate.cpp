@@ -129,9 +129,7 @@ class Candidate {
     // Destructor
 
     ~Candidate() {
-
-      
-
+      cout << "Your Profile Has Been Successfully Deleted!" << endl;
     }
 
     // Private Data Member Getters
