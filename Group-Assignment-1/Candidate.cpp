@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 class Candidate {
@@ -51,9 +49,9 @@ class Candidate {
       this -> m_candidate_name = m_candidate_name;
       this -> m_candidate_college_email = m_candidate_college_email;
       this -> m_candidate_personal_email = m_candidate_personal_email;
-      this -> m_candidate_personal_gender = m_candidate_personal_gender;
-      this -> m_candidate_personal_cgpa = m_candidate_personal_cgpa;
-      this -> m_candidate_personal_branch = m_candidate_personal_branch;
+      this -> m_candidate_gender = m_candidate_gender;
+      this -> m_candidate_cgpa = m_candidate_cgpa;
+      this -> m_candidate_branch = m_candidate_branch;
       this -> m_candidate_placed_status = false;
       this -> m_candidate_resume_link = "";
     }
@@ -65,10 +63,10 @@ class Candidate {
       this -> m_candidate_name = candidate.m_candidate_name;
       this -> m_candidate_college_email = candidate.m_candidate_college_email;
       this -> m_candidate_personal_email = candidate.m_candidate_personal_email;
-      this -> m_candidate_personal_gender = candidate.m_candidate_personal_gender;
-      this -> m_candidate_personal_cgpa = candidate.m_candidate_personal_cgpa;
-      this -> m_candidate_personal_branch = candidate.m_candidate_personal_branch;
+      this -> m_candidate_gender = candidate.m_candidate_gender;
+      this -> m_candidate_cgpa = candidate.m_candidate_cgpa;
+      this -> m_candidate_branch = candidate.m_candidate_branch;
       this -> m_candidate_placed_status = candidate.m_candidate_placed_status;
       this -> m_candidate_resume_link = candidate.m_candidate_resume_link;
     }
-}
+};
