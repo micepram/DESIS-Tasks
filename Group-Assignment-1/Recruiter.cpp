@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class Candidate {
+class Recruiter {
 
   private:
 
