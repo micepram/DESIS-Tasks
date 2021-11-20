@@ -24,5 +24,26 @@ class Recruiter {
     string interveiw_date;                       // Date of the interveiw
     string job_description;                      // All about the Job
   
+    public:
     
+    //PARAMETERISED CONSTRUCTOR
+    
+    Recruiter(string company_name,string job_profile,string job_location,vector<int> eligible_batches,
+              vector<string> eligible_branches,int durarion , string perks,int stipend,string application_process,
+              string application_open_date,string application_close_date,string interveiw_date,string job_description) {
+        
+    this -> company_name = company_name;                         
+    this -> job_profile = job_profile;                          
+    this -> job_location = job_location;                         
+    this -> eligible_batches = eligible_batches;                
+    this -> eligible_branches = eligible_branches;           
+    this -> durarion = durarion; 
+    this -> perks = perks;
+    this -> stipend = stipend;     
+    this -> application_process = application_process;     
+    this -> application_open_date = application_open_date;          
+    this -> application_close_date = application_close_date;      
+    this -> interveiw_date = interveiw_date;                 
+    this -> job_description = job_description;    
+    }
 };
