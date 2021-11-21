@@ -70,3 +70,6 @@ class Candidate {
       this -> m_candidate_resume_link = candidate.m_candidate_resume_link;
     }
 };
+
+
+  
