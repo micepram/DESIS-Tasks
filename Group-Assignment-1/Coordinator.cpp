@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Coordinator : public Candidate {
+class Coordinator {
 
   public:
 
