@@ -9,7 +9,7 @@ struct Criteria
 	float minCGPA;
     float eligible_10th_grade;
     float eligible_12th_grade;
-    string candidate_degree;
+    string eligible_degree;
     vector<string> eligible_batches;
     vector<string> eligible_branches;
 };
