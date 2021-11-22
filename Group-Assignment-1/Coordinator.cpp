@@ -12,6 +12,7 @@ class Coordinator {
     // Data Needed to Register A Coordinator (Private) - This data should not need to be changed after object creation.
 
     int m_coordinator_id;
+    vector<int> m_coordinator_companies_id;
     vector<string> m_coordinator_companies_name;
     vector<int> m_coordinator_companies_candidate_total_needed;
     vector<int> m_coordinator_companies_candidate_total_fulfilled;
@@ -34,6 +35,7 @@ class Coordinator {
     Coordinator(const Coordinator &coordinator) {
 
       this -> m_coordinator_id = m_coordinator_id;
+      this -> m_coordinator_companies_id = m_coordinator_companies_id;
       this -> m_coordinator_companies_name = m_coordinator_companies_name;
       this -> m_coordinator_companies_candidate_total_needed = m_coordinator_companies_candidate_total_needed;
       this -> m_coordinator_companies_candidate_total_fulfilled = m_coordinator_companies_candidate_total_fulfilled;
@@ -47,7 +49,8 @@ class Coordinator {
 
     // Functions / Behaviours
 
-    void addCompany(string m_coordinator_companies_name, 
+    void addCompany(int m_coordinator_companies_id,
+                    string m_coordinator_companies_name, 
                     int m_coordinator_companies_candidate_total_needed,
                     int m_coordinator_companies_candidate_total_fulfilled,
                     vector<int> m_coordinator_companies_candidate_graduation_year,
@@ -56,6 +59,7 @@ class Coordinator {
                     float m_coordinator_companies_candidate_grade_standard_12,
                     vector<string> m_coordinator_companies_candidate_degree) {
       
+      this -> m_coordinator_companies_id.push_back(m_coordinator_companies_id);
       this -> m_coordinator_companies_name.push_back(m_coordinator_companies_name);
       this -> m_coordinator_companies_candidate_total_needed.push_back(m_coordinator_companies_candidate_total_needed);
       this -> m_coordinator_companies_candidate_total_fulfilled.push_back(m_coordinator_companies_candidate_total_fulfilled);
@@ -65,5 +69,7 @@ class Coordinator {
       this -> m_coordinator_companies_candidate_degree.push_back(m_coordinator_companies_candidate_degree);
 
     }
+
+    voidSetCandidatePlaced()
 
 }
