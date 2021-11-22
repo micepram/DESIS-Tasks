@@ -45,6 +45,25 @@ class Coordinator {
 
     }
 
-    //
-    
+    // Functions / Behaviours
+
+    void addCompany(string m_coordinator_companies_name, 
+                    int m_coordinator_companies_candidate_total_needed,
+                    int m_coordinator_companies_candidate_total_fulfilled,
+                    vector<int> m_coordinator_companies_candidate_graduation_year,
+                    vector<string> m_coordinator_companies_candidate_branch,
+                    float m_coordinator_companies_candidate_grade_standard_10,
+                    float m_coordinator_companies_candidate_grade_standard_12,
+                    vector<string> m_coordinator_companies_candidate_degree) {
+      
+      this -> m_coordinator_companies_name.push_back(m_coordinator_companies_name);
+      this -> m_coordinator_companies_candidate_total_needed.push_back(m_coordinator_companies_candidate_total_needed);
+      this -> m_coordinator_companies_candidate_total_fulfilled.push_back(m_coordinator_companies_candidate_total_fulfilled);
+      this -> m_coordinator_companies_candidate_graduation_year.push_back(m_coordinator_companies_candidate_graduation_year);
+      this -> m_coordinator_companies_candidate_grade_standard_10.push_back(m_coordinator_companies_candidate_grade_standard_10);
+      this -> m_coordinator_companies_candidate_grade_standard_12.push_back(m_coordinator_companies_candidate_grade_standard_12);
+      this -> m_coordinator_companies_candidate_degree.push_back(m_coordinator_companies_candidate_degree);
+
+    }
+
 }
