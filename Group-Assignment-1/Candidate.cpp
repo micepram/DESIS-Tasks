@@ -101,6 +101,12 @@ class Candidate {
     void setInterviewBit(string m_candidate_url_interviewbit) {
       this -> m_candidate_url_interviewbit = m_candidate_url_interviewbit;
     }
+    
+    // Candidate cannot modify self Placement status.
+
+    // void setPlacedStatus(bool m_candidate_placed_status) {
+    //   this -> m_candidate_placed_status = m_candidate_placed_status;
+    // }
 
     void setPlacedCompany(string m_candidate_placed_company) {
       this -> m_candidate_placed_company = m_candidate_placed_company;
@@ -292,7 +298,6 @@ class Candidate {
       return this -> m_candidate_url_hackerrank;
     }
 
-
     string getHackerEarth() {
       return this -> m_candidate_url_hackerearth;
     }
@@ -304,12 +309,6 @@ class Candidate {
     bool getPlacedStatus() {
       return this -> m_candidate_placed_status;
     }
-
-    // Candidate cannot modify self Placement status.
-
-    // void setPlacedStatus(bool m_candidate_placed_status) {
-    //   this -> m_candidate_placed_status = m_candidate_placed_status;
-    // }
 
     string getPlacedCompany() {
       return this -> m_candidate_placed_company;
