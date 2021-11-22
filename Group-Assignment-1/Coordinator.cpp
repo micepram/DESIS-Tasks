@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Coordinator {
+class Coordinator : public Candidate {
 
   public:
 
@@ -112,4 +112,4 @@ class Coordinator {
 
     }
 
-}
+};

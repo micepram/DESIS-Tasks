@@ -323,4 +323,8 @@ class Candidate {
       this -> m_candidate_preference_company = m_candidate_preference_company;
     }
 
-}
+    // Functions / Behaviours
+
+    
+
+};
