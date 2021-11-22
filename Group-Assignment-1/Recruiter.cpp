@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
+#include "CommonHeader.h"
 using namespace std;
 
 struct Criteria
@@ -9,12 +9,11 @@ struct Criteria
 	float minCGPA;
     float eligible_10th_grade;
     float eligible_12th_grade;
-    string candidate_degree;
+    string eligible_degree;
     vector<string> eligible_batches;
     vector<string> eligible_branches;
 };
     
-}
 class Recruiter {
 
   private:
@@ -24,7 +23,7 @@ class Recruiter {
     string company_name;                         // Company's Name
     string job_profile;                          // Job Profile (STEP/INTERN/FULL TIME)
     string job_location;                         // Job_Location (Bangalore/Hyderabad etc)
-    int durarion;                                // In case of INTERNSHIP duration of the job
+    int duration;                                // In case of INTERNSHIP duration of the job
     string perks;                                // Benefits of the job
     int stipend;                                 // Per month Stipend
     string job_description;                      // All about the Job
@@ -106,19 +105,19 @@ class Recruiter {
         return Eligibility.minCGPA;
     }
     
-    void set_eligible_degree(void eligible_degrees){
-	return Eligibility.eligible_degrees;    
+    string set_eligible_degree(string eligible_degree){
+	return Eligibility.eligible_degree;    
     }	
 	
-    string get_eligible_degree(){
-	this -> Eligibility.eligible_degrees = Eligibility.eligible_degree;    
+    void get_eligible_degree(){
+	this -> Eligibility.eligible_degree = Eligibility.eligible_degree;    
     }
     
     void set_eligible_batches(vector<int> eligible_batches){
         this -> Eligibility.eligible_batches = Eligibility.eligible_batches;
     }  
 
-    vector<int> get_eligible_batches(){
+    vector<string> get_eligible_batches(){
         return Eligibility.eligible_batches;
     }  
     
@@ -130,8 +129,8 @@ class Recruiter {
         return Eligibility.eligible_branches;
     }    
     
-    int get_durarion(){
-        return duration
+    int get_duration(){
+        return duration;
     } 
     
     string get_perks(){
@@ -178,7 +177,7 @@ class Recruiter {
     //Behaviour functions
   
     void hireCandidates(vector<Candidate> ranklist) {
-        for(int i=0;i<min(ranklist.size(), number_of_req); i++) {
+        for(int i=0;i<min(int(ranklist.size()), int(number_of_req)); i++) {
             hiredCandidates.push_back(ranklist[i]);
             number_of_hired++;
         }
