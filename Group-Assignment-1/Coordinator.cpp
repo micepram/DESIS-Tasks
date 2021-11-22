@@ -9,7 +9,7 @@ class Coordinator {
 
   public:
 
-    // Data Needed to Register A Coordinator (Private) - This data should not need to be changed after object creation.
+    // Data Needed to Register A Coordinator (Public) - This data should not need to be changed after object creation.
 
     int m_coordinator_id;
     vector<int> m_coordinator_companies_id;
