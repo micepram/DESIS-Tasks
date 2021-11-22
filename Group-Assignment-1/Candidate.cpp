@@ -22,7 +22,8 @@ class Candidate {
     float m_candidate_grade_standard_12;                // Candidate's Aggregate 12th Standard Marks
 
 
-// Private Data Member Getters
+  public:
+  // Private Data Member Getters
 
     int getID() {
       return this -> m_candidate_id;
