@@ -82,7 +82,7 @@ class Recruiter {
         return job_location;
     }   
     
-    void set_eligible_10th_grade(flaot eligible_10th_grade){
+    void set_eligible_10th_grade(float eligible_10th_grade){
         this -> Eligibility.eligible_10th_grade = Eligibility.eligible_10th_grade;
     }
 
@@ -90,7 +90,7 @@ class Recruiter {
         return Eligibility.eligible_10th_grade;
     }
 	
-    void set_eligible_12th_grade(flaot eligible_12th_grade){
+    void set_eligible_12th_grade(float eligible_12th_grade){
         this -> Eligibility.eligible_12th_grade = Eligibility.eligible_12th_grade;
     }
 
@@ -98,7 +98,7 @@ class Recruiter {
         return Eligibility.eligible_12th_grade;
     }
 	
-    void set_minCGPA(flaot minCGPA){
+    void set_minCGPA(float minCGPA){
         this -> Eligibility.minCGPA = Eligibility.minCGPA;
     }
 
