@@ -82,6 +82,22 @@ class Recruiter {
         return job_location;
     }   
     
+    void set_eligible_10th_grade(flaot eligible_10th_grade){
+        this -> Eligibility.eligible_10th_grade = Eligibility.eligible_10th_grade;
+    }
+
+    float get_eligible_10th_grade(){
+        return Eligibility.eligible_10th_grade;
+    }
+	
+    void set_eligible_12th_grade(flaot eligible_12th_grade){
+        this -> Eligibility.eligible_12th_grade = Eligibility.eligible_12th_grade;
+    }
+
+    float get_eligible_12th_grade(){
+        return Eligibility.eligible_12th_grade;
+    }
+	
     void set_minCGPA(flaot minCGPA){
         this -> Eligibility.minCGPA = Eligibility.minCGPA;
     }
@@ -89,8 +105,16 @@ class Recruiter {
     float get_minCGPA(){
         return Eligibility.minCGPA;
     }
-
-    void get_eligible_batches(vector<int> eligible_batches){
+    
+    void set_eligible_degree(void eligible_degrees){
+	return Eligibility.eligible_degrees;    
+    }	
+	
+    string get_eligible_degree(){
+	this -> Eligibility.eligible_degrees = Eligibility.eligible_degree;    
+    }
+    
+    void set_eligible_batches(vector<int> eligible_batches){
         this -> Eligibility.eligible_batches = Eligibility.eligible_batches;
     }  
 
