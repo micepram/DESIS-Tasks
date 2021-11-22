@@ -70,6 +70,22 @@ class Coordinator {
 
     }
 
-    voidSetCandidatePlaced()
+    void setCandidatePlaced(vector<Candidate> candidate_list, int candidate_id, float candidate_ctc) {
+      
+      candidate_list[candidate_id].setPlacedCompany(this -> m_coordinator_companies_name);
+      candidate_list[candidate_id].setPlacedCTC(candidate_ctc);
+      candidate_list[candidate_id].setPlacedStatus(true);
+
+    }
+
+    vector<int> getEligibleCandidates(vector<Candidate> candidate_list, vector<int> candidate_graduation_year, 
+                                      vector<string> canidate_branch, float candidate_grade_standard_10, 
+                                      float candidate_grade_standard_12, vector<string> candidate_degree) {
+      
+      for(Candidate c : candidate_list) {
+        
+      }
+
+    }
 
 }
