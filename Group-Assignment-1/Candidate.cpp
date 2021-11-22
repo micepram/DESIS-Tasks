@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "CommonHeader.h"
 
 using namespace std;
 
@@ -284,9 +285,11 @@ class Candidate {
       return this -> m_candidate_placed_status;
     }
 
-    void setPlacedStatus(bool m_candidate_placed_status) {
-      this -> m_candidate_placed_status = m_candidate_placed_status;
-    }
+    // Candidate cannot modify self Placement status.
+
+    // void setPlacedStatus(bool m_candidate_placed_status) {
+    //   this -> m_candidate_placed_status = m_candidate_placed_status;
+    // }
 
     string getPlacedCompany() {
       return this -> m_candidate_placed_company;
@@ -319,5 +322,9 @@ class Candidate {
     void setPrefCompany(vector<string> m_candidate_preference_company) {
       this -> m_candidate_preference_company = m_candidate_preference_company;
     }
+
+    // Functions / Behaviours
+
+    
 
 }
