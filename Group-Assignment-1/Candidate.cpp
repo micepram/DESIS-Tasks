@@ -21,6 +21,49 @@ class Candidate {
     float m_candidate_grade_standard_10;                // Candidate's Aggregate 10th Standard Marks
     float m_candidate_grade_standard_12;                // Candidate's Aggregate 12th Standard Marks
 
+
+// Private Data Member Getters
+
+    int getID() {
+      return this -> m_candidate_id;
+    }
+
+    string getName() {
+      return this -> m_candidate_name;
+    }
+
+    char getGender() {
+      return this -> m_candidate_gender;
+    }
+
+    int getAge() {
+      return this -> m_candidate_age;
+    }
+
+    string getDegree() {
+      return this -> m_candidate_degree;
+    }
+
+    string getBranch() {
+      return this -> m_candidate_branch;
+    }
+
+    int getGraduationYear() {
+      return this -> m_candidate_graduation_year;
+    }
+
+    string getCollegeEmail() {
+      return this -> m_candidate_college_email;
+    }
+
+    float getGradeStandard10() {
+      return this -> m_candidate_grade_standard_10;
+    }
+
+    float getGradeStandard12() {
+      return this -> m_candidate_grade_standard_12;
+    }
+
   protected:
 
     // Data Needed to Register A Candidate (Protected) - This data can be updated after object creation.
@@ -51,7 +94,7 @@ class Candidate {
               string m_candidate_degree, string m_candidate_branch, int m_candidate_graduation_year,
               string m_candidate_college_email, float m_candidate_grade_standard_10,
               float m_candidate_grade_standard_12, float m_candidate_cgpa, string m_candidate_personal_email,
-              string m_candidate_active_backlogs_count) {
+              int m_candidate_active_backlogs_count) {
 
       // Required Values
 
@@ -121,57 +164,14 @@ class Candidate {
 
     // Destructor
 
-    ~Candidate() {
+    // ~Candidate() {
 
       
 
-    }
+    // }
 };
 
-    // Private Data Member Getters
-
-    int getID() {
-      return this -> m_candidate_id;
-    }
-
-    string getName() {
-      return this -> m_candidate_name;
-    }
-
-    char getGender() {
-      return this -> m_candidate_gender;
-    }
-
-    int getAge() {
-      return this -> m_candidate_age;
-    }
-
-    string getDegree() {
-      return this -> m_candidate_degree;
-    }
-
-    string getBranch() {
-      return this -> m_candidate_branch;
-    }
-
-    int getGraduationYear() {
-      return this -> m_candidate_graduation_year;
-    }
-
-    string getCollegeEmail() {
-      return this -> m_candidate_college_email;
-    }
-
-    float getGradeStandard10() {
-      return this -> m_candidate_grade_standard_10;
-    }
-
-    float getGradeStandard12() {
-      return this -> m_candidate_grade_standard_12;
-    }
-
+    
     // Protected Data Member Getters & Setters
 
-    
-}
-q
+  
