@@ -82,9 +82,33 @@ class Coordinator {
                                       vector<string> canidate_branch, float candidate_grade_standard_10, 
                                       float candidate_grade_standard_12, vector<string> candidate_degree) {
       
+      vector<Candidate> eligible_candidate_list;
       for(Candidate c : candidate_list) {
-        
+        bool check = true;
+        for(auto & cgy : candidate_graduation_year)
+          if(cgy == c.getGraduationYear())
+            check = false;
+        for(auto & cb : canidate_branch)
+          if(cb == c.getBranch())
+            check = false;
+        for(auto & cd : candidate_degree)
+          if(cd == c.getDegree())
+            check = false;
+        if(candidate_grade_standard_10 < c.getGradeStandard10())
+          check = false;
+        if(candidate_grade_standard_12 < c.getGradeStandard12())
+          check = false;
+        if(check == true)
+          eligible_candidate_list.push_back(c);
       }
+
+    }
+
+    void setCandidateBlacklisted(vector<Candidate> candidate_list, int candidate_id) {
+
+      candidate_list[candidate_id].setPlacedCompany("Blacklisted.");
+      candidate_list[candidate_id].setPlacedCTC(-1.0);
+      candidate_list[candidate_id].setPlacedStatus(true);
 
     }
 
