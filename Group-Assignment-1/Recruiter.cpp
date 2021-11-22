@@ -105,12 +105,21 @@ class Recruiter {
         return Eligibility.minCGPA;
     }
     
+<<<<<<< HEAD
     string set_eligible_degree(string eligible_degree){
 	return Eligibility.eligible_degree;    
     }	
 	
     void get_eligible_degree(){
 	this -> Eligibility.eligible_degree = Eligibility.eligible_degree;    
+=======
+    string set_eligible_degree(string eligible_degrees){
+	return Eligibility.eligible_degrees;    
+    }	
+	
+    void get_eligible_degree(){
+	this -> Eligibility.eligible_degrees = Eligibility.eligible_degree;    
+>>>>>>> 93a671a04078d78a04e8abb7d0cad38cd87718cd
     }
     
     void set_eligible_batches(vector<int> eligible_batches){
@@ -121,7 +130,7 @@ class Recruiter {
         return Eligibility.eligible_batches;
     }  
     
-    void set_eligible_branches(){
+    void set_eligible_branches(vector<string> eligible_branches){
         this -> Eligibility.eligible_branches = Eligibility.eligible_branches;
     }   
 

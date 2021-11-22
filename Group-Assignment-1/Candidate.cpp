@@ -48,200 +48,86 @@ class Candidate {
     float m_candidate_preference_min_ctc;               // Candidate's Preference for Minimum CTC (Optional)
     vector<string> m_candidate_preference_company;      // Candidate's Preference among Companies (Optional)
 
-
-
-    // Private Data Member Getters
-
-    int getID() {
-      return this -> m_candidate_id;
-    }
-
-    string getName() {
-      return this -> m_candidate_name;
-    }
-
-    char getGender() {
-      return this -> m_candidate_gender;
-    }
-
-    int getAge() {
-      return this -> m_candidate_age;
-    }
-
-    string getDegree() {
-      return this -> m_candidate_degree;
-    }
-
-    string getBranch() {
-      return this -> m_candidate_branch;
-    }
-
-    int getGraduationYear() {
-      return this -> m_candidate_graduation_year;
-    }
-
-    string getCollegeEmail() {
-      return this -> m_candidate_college_email;
-    }
-
-    float getGradeStandard10() {
-      return this -> m_candidate_grade_standard_10;
-    }
-
-    float getGradeStandard12() {
-      return this -> m_candidate_grade_standard_12;
-    }
-
-    // Protected Data Member Getters & Setters
-
-    float getCGPA() {
-      return this -> m_candidate_cgpa;
-    }
+    // Protected Data Member Setters
 
     void setCGPA(float m_candidate_cgpa) {
       this -> m_candidate_cgpa = m_candidate_cgpa;
-    }
-
-    string getPersonalEmail() {
-      return this -> m_candidate_personal_email;
     }
 
     void setPersonalEmail(string m_candidate_personal_email) {
       this -> m_candidate_personal_email = m_candidate_personal_email;
     }
 
-    int getActiveBacklogsCount() {
-      return this -> m_candidate_active_backlogs_count;
-    }
-
     void setActiveBacklogsCount(int m_candidate_active_backlogs_count) {
       this -> m_candidate_active_backlogs_count = m_candidate_active_backlogs_count;
-    }
-
-    string getGitHub() {
-      return this -> m_candidate_url_github;
     }
 
     void setGitHub(string m_candidate_url_github) {
       this -> m_candidate_url_github = m_candidate_url_github;
     }
 
-    string getGitLab() {
-      return this -> m_candidate_url_gitlab;
-    }
-
     void setGitLab(string m_candidate_url_gitlab) {
       this -> m_candidate_url_gitlab = m_candidate_url_gitlab;
-    }
-
-    string getResume() {
-      return this -> m_candidate_url_resume;
     }
 
     void setResume(string m_candidate_url_resume) {
       this -> m_candidate_url_resume = m_candidate_url_resume;
     }
 
-    string getTwitter() {
-      return this -> m_candidate_url_twitter;
-    }
-
     void setTwitter(string m_candidate_url_twitter) {
       this -> m_candidate_url_twitter = m_candidate_url_twitter;
-    }
-
-    string getCodeChef() {
-      return this -> m_candidate_url_codechef;
     }
 
     void setCodeChef(string m_candidate_url_codechef) {
       this -> m_candidate_url_codechef = m_candidate_url_codechef;
     }
 
-    string getLinkedIn() {
-      return this -> m_candidate_url_linkedin;
-    }
-
     void setLinkedIn(string m_candidate_url_linkedin) {
       this -> m_candidate_url_linkedin = m_candidate_url_linkedin;
-    }
-
-    string getPortfolio() {
-      return this -> m_candidate_url_portfolio;
     }
 
     void setPortfolio(string m_candidate_url_portfolio) {
       this -> m_candidate_url_portfolio = m_candidate_url_portfolio;
     }
 
-    string getHackerRank() {
-      return this -> m_candidate_url_hackerrank;
-    }
-
     void setHackerRank(string m_candidate_url_hackerrank) {
       this -> m_candidate_url_hackerrank = m_candidate_url_hackerrank;
-    }
-
-    string getHackerEarth() {
-      return this -> m_candidate_url_hackerearth;
     }
 
     void setHackerEarth(string m_candidate_url_hackerearth) {
       this -> m_candidate_url_hackerearth = m_candidate_url_hackerearth;
     }
 
-    string getInterviewBit() {
-      return this -> m_candidate_url_interviewbit;
-    }
-
     void setInterviewBit(string m_candidate_url_interviewbit) {
       this -> m_candidate_url_interviewbit = m_candidate_url_interviewbit;
     }
-
-    bool getPlacedStatus() {
-      return this -> m_candidate_placed_status;
-    }
-
+    
     // Candidate cannot modify self Placement status.
 
     // void setPlacedStatus(bool m_candidate_placed_status) {
     //   this -> m_candidate_placed_status = m_candidate_placed_status;
     // }
 
-    string getPlacedCompany() {
-      return this -> m_candidate_placed_company;
-    }
-
     void setPlacedCompany(string m_candidate_placed_company) {
       this -> m_candidate_placed_company = m_candidate_placed_company;
-    }
-
-    float getPlacedCTC() {
-      return this -> m_candidate_placed_ctc;
     }
 
     void setPlacedCTC(float m_candidate_placed_ctc) {
       this -> m_candidate_placed_ctc = m_candidate_placed_ctc;
     }
 
-    float getPrefMinCTC() {
-      return this -> m_candidate_preference_min_ctc;
-    }
-
-    void setPrefMinCTC(float m_candidate_preference_min_ctc) {
-      this -> m_candidate_preference_min_ctc = m_candidate_preference_ctc;
-    }
-
-    vector<string> getPrefCompany() {
-      return this -> m_candidate_preference_company;
-    }
-
     void setPrefCompany(vector<string> m_candidate_preference_company) {
       this -> m_candidate_preference_company = m_candidate_preference_company;
     }
+    
+    void setPrefMinCTC(float m_candidate_preference_min_ctc) {
+      this -> m_candidate_preference_min_ctc = m_candidate_preference_ctc;
+    }
+    
 
   public:
 
+    
     // Parameterised Default Constructor
 
     Candidate(int m_candidate_id, string m_candidate_name, char m_candidate_gender, int m_candidate_age,
@@ -325,8 +211,119 @@ class Candidate {
     ~Candidate() {
       cout << "Your Profile Has Been Successfully Deleted!" << endl;
     }
-    // Functions / Behaviours
+    
+    // Private & Protected Data Member Getters
 
+    int getID() {
+      return this -> m_candidate_id;
+    }
 
+    string getName() {
+      return this -> m_candidate_name;
+    }
+
+    char getGender() {
+      return this -> m_candidate_gender;
+    }
+
+    int getAge() {
+      return this -> m_candidate_age;
+    }
+
+    string getDegree() {
+      return this -> m_candidate_degree;
+    }
+
+    string getBranch() {
+      return this -> m_candidate_branch;
+    }
+
+    int getGraduationYear() {
+      return this -> m_candidate_graduation_year;
+    }
+
+    string getCollegeEmail() {
+      return this -> m_candidate_college_email;
+    }
+
+    float getGradeStandard10() {
+      return this -> m_candidate_grade_standard_10;
+    }
+
+    float getGradeStandard12() {
+      return this -> m_candidate_grade_standard_12;
+    }
+
+    float getCGPA() {
+      return this -> m_candidate_cgpa;
+    }
+
+    string getPersonalEmail() {
+      return this -> m_candidate_personal_email;
+    }
+
+    int getActiveBacklogsCount() {
+      return this -> m_candidate_active_backlogs_count;
+    }
+
+    string getGitHub() {
+      return this -> m_candidate_url_github;
+    }
+
+    string getGitLab() {
+      return this -> m_candidate_url_gitlab;
+    }
+
+    string getResume() {
+      return this -> m_candidate_url_resume;
+    }
+
+    string getTwitter() {
+      return this -> m_candidate_url_twitter;
+    }
+
+    string getCodeChef() {
+      return this -> m_candidate_url_codechef;
+    }
+
+    string getLinkedIn() {
+      return this -> m_candidate_url_linkedin;
+    }
+
+    string getPortfolio() {
+      return this -> m_candidate_url_portfolio;
+    }
+
+    string getHackerRank() {
+      return this -> m_candidate_url_hackerrank;
+    }
+
+    string getHackerEarth() {
+      return this -> m_candidate_url_hackerearth;
+    }
+
+    string getInterviewBit() {
+      return this -> m_candidate_url_interviewbit;
+    }
+
+    bool getPlacedStatus() {
+      return this -> m_candidate_placed_status;
+    }
+
+    string getPlacedCompany() {
+      return this -> m_candidate_placed_company;
+    }
+    
+    float getPlacedCTC() {
+      return this -> m_candidate_placed_ctc;
+    }
+    
+    vector<string> getPrefCompany() {
+      return this -> m_candidate_preference_company;
+    }
+
+    float getPrefMinCTC() {
+      return this -> m_candidate_preference_min_ctc;
+    }
 
 };

@@ -446,6 +446,16 @@ struct Criteria
     vector<string> eligible_branches;
 };
     
+struct Criteria
+{
+  float minCGPA;
+    float eligible_10th_grade;
+    float eligible_12th_grade;
+    string eligible_degree;
+    vector<string> eligible_batches;
+    vector<string> eligible_branches;
+};
+    
 class Recruiter {
 
   private:
@@ -477,13 +487,13 @@ class Recruiter {
     
     //PARAMETERISED CONSTRUCTOR
     
-    Recruiter(string company_name,string job_profile,string job_location,int durarion , string perks,int stipend,
+    Recruiter(string company_name,string job_profile,string job_location,int duration , string perks,int stipend,
     string application_process,string job_description, int number_of_req,Criteria Eligibility) {
         
     this -> company_name = company_name;                         
     this -> job_profile = job_profile;                          
     this -> job_location = job_location;                  
-    this -> durarion = durarion; 
+    this -> duration = duration; 
     this -> perks = perks;
     this -> stipend = stipend;     
     this -> application_process = application_process;
@@ -553,7 +563,7 @@ class Recruiter {
         return Eligibility.eligible_batches;
     }  
     
-    void set_eligible_branches(){
+    void set_eligible_branches(vector<string> eligible_branches){
         this -> Eligibility.eligible_branches = Eligibility.eligible_branches;
     }   
 
@@ -617,4 +627,3 @@ class Recruiter {
   
     
 };
-  
