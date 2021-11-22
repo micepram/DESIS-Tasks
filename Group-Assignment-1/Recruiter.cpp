@@ -39,7 +39,7 @@ class Recruiter {
     int number_of_req;
     int number_of_hired;
 
-    vector<Candidates> hiredCandidates;
+    vector<Candidate> hiredCandidates;
     
     
     public:
