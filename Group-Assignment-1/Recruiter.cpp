@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "CommonHeader.h"
+// #include "CommonHeader.h"
 using namespace std;
 
 struct Criteria
@@ -45,13 +45,13 @@ class Recruiter {
     
     //PARAMETERISED CONSTRUCTOR
     
-    Recruiter(string company_name,string job_profile,string job_location,int durarion , string perks,int stipend,
+    Recruiter(string company_name,string job_profile,string job_location,int duration , string perks,int stipend,
     string application_process,string job_description, int number_of_req,Criteria Eligibility) {
         
     this -> company_name = company_name;                         
     this -> job_profile = job_profile;                          
     this -> job_location = job_location;                  
-    this -> durarion = durarion; 
+    this -> duration = duration; 
     this -> perks = perks;
     this -> stipend = stipend;     
     this -> application_process = application_process;
@@ -105,21 +105,12 @@ class Recruiter {
         return Eligibility.minCGPA;
     }
     
-<<<<<<< HEAD
     string set_eligible_degree(string eligible_degree){
 	return Eligibility.eligible_degree;    
     }	
 	
     void get_eligible_degree(){
 	this -> Eligibility.eligible_degree = Eligibility.eligible_degree;    
-=======
-    string set_eligible_degree(string eligible_degrees){
-	return Eligibility.eligible_degrees;    
-    }	
-	
-    void get_eligible_degree(){
-	this -> Eligibility.eligible_degrees = Eligibility.eligible_degree;    
->>>>>>> 93a671a04078d78a04e8abb7d0cad38cd87718cd
     }
     
     void set_eligible_batches(vector<int> eligible_batches){
