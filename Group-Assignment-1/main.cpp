@@ -124,7 +124,7 @@ class Candidate {
     }
     
     void setPrefMinCTC(float m_candidate_preference_min_ctc) {
-      this -> m_candidate_preference_min_ctc = m_candidate_preference_ctc;
+      this -> m_candidate_preference_min_ctc = m_candidate_preference_min_ctc; 
     }
     
 
@@ -137,7 +137,7 @@ class Candidate {
               string m_candidate_degree, string m_candidate_branch, int m_candidate_graduation_year,
               string m_candidate_college_email, float m_candidate_grade_standard_10,
               float m_candidate_grade_standard_12, float m_candidate_cgpa, string m_candidate_personal_email,
-              string m_candidate_active_backlogs_count) {
+              int m_candidate_active_backlogs_count) { 
 
       // Required Values
 
