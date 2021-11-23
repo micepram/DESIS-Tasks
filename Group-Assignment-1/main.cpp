@@ -414,7 +414,7 @@ class Coordinator : public Candidate {
 
     } // ask pramika for expalnation .. 
 
-    vector<int> getEligibleCandidates(vector<Candidate> candidate_list, vector<int> candidate_graduation_year, 
+    vector<Candidate> getEligibleCandidates(vector<Candidate> candidate_list, vector<int> candidate_graduation_year, 
                                       vector<string> canidate_branch, float candidate_grade_standard_10, 
                                       float candidate_grade_standard_12, vector<string> candidate_degree) {
       
@@ -436,8 +436,8 @@ class Coordinator : public Candidate {
           check = false;
         if(check == true)
           eligible_candidate_list.push_back(c);
-      }
-
+      } 
+      return eligible_candidate_list;
     }
 
     void setCandidateBlacklisted(vector<Candidate> candidate_list, int candidate_id) {
