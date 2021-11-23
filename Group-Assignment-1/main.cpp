@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Final File with All Combined Code
 
 #include <iostream>
@@ -451,4 +449,4 @@ class Coordinator : public Candidate {
       // // ask pramika for expllll.. 
     }
 
->>>>>>> 93a671a04078d78a04e8abb7d0cad38cd87718cd
+};
