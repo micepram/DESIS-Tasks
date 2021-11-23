@@ -405,11 +405,14 @@ class Coordinator : public Candidate {
 
     void setCandidatePlaced(vector<Candidate> candidate_list, int candidate_id, float candidate_ctc) {
       
-      candidate_list[candidate_id].setPlacedCompany(this -> m_coordinator_companies_name);
-      candidate_list[candidate_id].setPlacedCTC(candidate_ctc);
-      candidate_list[candidate_id].setPlacedStatus(true);
 
-    }
+      // TODO (FIX ERRORS)
+
+      // candidate_list[candidate_id].setPlacedCompany(this -> m_coordinator_companies_name);
+      // candidate_list[candidate_id].setPlacedCTC(candidate_ctc); 
+      // candidate_list[candidate_id].setPlacedStatus(true);
+
+    } // ask pramika for expalnation .. 
 
     vector<int> getEligibleCandidates(vector<Candidate> candidate_list, vector<int> candidate_graduation_year, 
                                       vector<string> canidate_branch, float candidate_grade_standard_10, 
@@ -438,12 +441,14 @@ class Coordinator : public Candidate {
     }
 
     void setCandidateBlacklisted(vector<Candidate> candidate_list, int candidate_id) {
+      // TODO (FIX ERRORS) 
+      
 
-      candidate_list[candidate_id].setPlacedCompany("Blacklisted.");
-      candidate_list[candidate_id].setPlacedCTC(-1.0);
-      candidate_list[candidate_id].setPlacedStatus(true);
-
+      // candidate_list[candidate_id].setPlacedCompany("Blacklisted.");
+      // candidate_list[candidate_id].setPlacedCTC(-1.0);
+      // candidate_list[candidate_id].setPlacedStatus(true);
+     
+      // // ask pramika for expllll.. 
     }
 
-};
 >>>>>>> 93a671a04078d78a04e8abb7d0cad38cd87718cd
