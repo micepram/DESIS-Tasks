@@ -350,26 +350,33 @@ class Coordinator : public Candidate {
 
     // Initial Constructor
 
-    Coordinator(int m_coordinator_id) {
+    Coordinator(int m_coordinator_id, int m_candidate_id, string m_candidate_name, char m_candidate_gender, int m_candidate_age,
+              string m_candidate_degree, string m_candidate_branch, int m_candidate_graduation_year,
+              string m_candidate_college_email, float m_candidate_grade_standard_10,
+              float m_candidate_grade_standard_12, float m_candidate_cgpa, string m_candidate_personal_email,
+              int m_candidate_active_backlogs_count) :
+      Candidate(m_candidate_id, m_candidate_name,  m_candidate_gender,  m_candidate_age,
+              m_candidate_degree, m_candidate_branch,  m_candidate_graduation_year,
+               m_candidate_college_email, m_candidate_grade_standard_10,
+              m_candidate_grade_standard_12, m_candidate_cgpa, m_candidate_personal_email,
+              m_candidate_active_backlogs_count), m_coordinator_id(m_coordinator_id){}
 
-      this -> m_coordinator_id = m_coordinator_id;
 
-    }
+    // Copy Constructor 
 
-    // Copy Constructor
+    Coordinator(const Coordinator &coordinator) : Candidate((coordinator)) {
+      // Candidate((coordinator)); 
 
-    Coordinator(const Coordinator &coordinator) {
-
-      this -> m_coordinator_id = m_coordinator_id;
-      this -> m_coordinator_companies_id = m_coordinator_companies_id;
-      this -> m_coordinator_companies_name = m_coordinator_companies_name;
-      this -> m_coordinator_companies_candidate_total_needed = m_coordinator_companies_candidate_total_needed;
-      this -> m_coordinator_companies_candidate_total_fulfilled = m_coordinator_companies_candidate_total_fulfilled;
-      this -> m_coordinator_companies_candidate_graduation_year = m_coordinator_companies_candidate_graduation_year;
-      this -> m_coordinator_companies_candidate_branch = m_coordinator_companies_candidate_branch;
-      this -> m_coordinator_companies_candidate_grade_standard_10 = m_coordinator_companies_candidate_grade_standard_10;
-      this -> m_coordinator_companies_candidate_grade_standard_12 = m_coordinator_companies_candidate_grade_standard_12;
-      this -> m_coordinator_companies_candidate_degree = m_coordinator_companies_candidate_degree;
+      this -> m_coordinator_id = coordinator.m_coordinator_id;
+      this -> m_coordinator_companies_id = coordinator.m_coordinator_companies_id;
+      this -> m_coordinator_companies_name = coordinator.m_coordinator_companies_name;
+      this -> m_coordinator_companies_candidate_total_needed = coordinator.m_coordinator_companies_candidate_total_needed;
+      this -> m_coordinator_companies_candidate_total_fulfilled = coordinator.m_coordinator_companies_candidate_total_fulfilled;
+      this -> m_coordinator_companies_candidate_graduation_year = coordinator.m_coordinator_companies_candidate_graduation_year;
+      this -> m_coordinator_companies_candidate_branch = coordinator.m_coordinator_companies_candidate_branch;
+      this -> m_coordinator_companies_candidate_grade_standard_10 = coordinator.m_coordinator_companies_candidate_grade_standard_10;
+      this -> m_coordinator_companies_candidate_grade_standard_12 = coordinator.m_coordinator_companies_candidate_grade_standard_12;
+      this -> m_coordinator_companies_candidate_degree = coordinator.m_coordinator_companies_candidate_degree;
 
     }
 
