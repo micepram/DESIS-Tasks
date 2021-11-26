@@ -698,3 +698,44 @@ class Coordinator : public Candidate {
 
 
 
+int main(){
+
+  Candidate ansh( 76, "ansh", 'M', 20, "BTech", "IT",2024, "iit2020076@iitkp.ac.in", 9.0, 9.5, 8.8, "ansh@gmail.com",0);
+  Candidate aman( 70, "aman", 'M', 20, "BTech", "IT",2024, "iit2020070@iitkp.ac.in", 9.0, 8.5, 9.8, "aman@gmail.com",0);
+  Candidate kavita( 46, "kavita", 'F', 20, "BTech", "ECE",2024, "iit2020046@iitkp.ac.in", 8.0, 8.5, 7.8, "kavita@gmail.com",1);
+  Candidate harry( 10, "harry", 'M', 20, "BTech", "IT",2024, "iit2020010@iitkp.ac.in", 9.0, 9.5, 7.8, "harry@gmail.com",0);
+  Candidate hardik( 23, "hardik", 'M', 20, "BTech", "ECE",2024, "iit2020023@iitkp.ac.in", 10.0, 9.5, 9.8, "hardik@gmail.com",0);
+  Coordinator akanksha( 1,22,"akanksha",'F',20,"BTech","IT",2024,"iit2020022@iitkp.ac.in",9.14,9.4,8.76,"akanksha@gmail.com",0);
+  Coordinator dev( 2,21,"dev",'M',20,"BTech","IT",2024,"iit2020021@iitkp.ac.in",9.1,8.4,7.76,"dev@gmail.com",0);
+
+  vector<Candidate> students;
+  students.push_back(ansh);
+  students.push_back(aman);
+  students.push_back(kavita);
+  students.push_back(harry);
+  students.push_back(hardik);
+  students.push_back(akanksha);
+  students.push_back(dev);
+
+  struct Criteria forGoogle;
+  forGoogle.minCGPA = 8.0;
+  forGoogle.eligible_degrees = {"BTech"};
+  forGoogle.eligible_10th_grade = 8.0;
+  forGoogle.eligible_12th_grade = 8.0;
+  forGoogle.eligible_batches = { 2024, 2023 };
+  forGoogle.eligible_branches = { "IT", "ECE" };
+
+  Recruiter Google( "Google","INTERNSHIP","Hyderabad", 2, "", 98000, "", "", 10, forGoogle);
+  Google.set_eligible_batches({2023, 2024});
+  Google.set_eligible_branches({"IT","ECE"});
+  Google.set_eligible_degrees({"BTech"});
+  Google.set_eligible_10th_grade(9.0);
+  Google.set_eligible_12th_grade(9.0);
+  Google.set_stipend(98000);
+
+  for(auto &candidate : students){
+    cout<<candidate.getName()<<"\n"<<candidate.getBranch()<<"\n"<<candidate.getDegree()<<"\n"<<candidate.getPlacedStatus()<<"\n"<<candidate.getPlacedCompany()<<
+    candidate.getPlacedCTC()<<"\n\n\n";
+  }
+  return 0;
+}
