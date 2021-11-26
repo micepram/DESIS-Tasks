@@ -105,115 +105,7 @@ class Candidate {
     
     // Candidate cannot modify self Placement status.
 
-    // void setPlacedStatus(bool m_candidate_placed_status) {
-    //   this -> m_candidate_placed_status = m_candidate_placed_status;
-    // }
-
-    void setPlacedCompany(string m_candidate_placed_company) {
-      this -> m_candidate_placed_company = m_candidate_placed_company;
-    }
-
-    void setPlacedCTC(float m_candidate_placed_ctc) {
-      this -> m_candidate_placed_ctc = m_candidate_placed_ctc;
-    }
-
-    void setPrefCompany(vector<string> m_candidate_preference_company) {
-      this -> m_candidate_preference_company = m_candidate_preference_company;
-    }
-    
-    void setPrefMinCTC(float m_candidate_preference_min_ctc) {
-      this -> m_candidate_preference_min_ctc = m_candidate_preference_min_ctc; 
-    }
-    
-
   public:
-
-    
-    // Parameterised Default Constructor
-
-    Candidate(int m_candidate_id, string m_candidate_name, char m_candidate_gender, int m_candidate_age,
-              string m_candidate_degree, string m_candidate_branch, int m_candidate_graduation_year,
-              string m_candidate_college_email, float m_candidate_grade_standard_10,
-              float m_candidate_grade_standard_12, float m_candidate_cgpa, string m_candidate_personal_email,
-              int m_candidate_active_backlogs_count) { 
-
-      // Required Values
-
-      this -> m_candidate_id = m_candidate_id;
-      this -> m_candidate_name = m_candidate_name;
-      this -> m_candidate_gender = m_candidate_gender;
-      this -> m_candidate_age = m_candidate_age;
-      this -> m_candidate_degree = m_candidate_degree;
-      this -> m_candidate_branch = m_candidate_branch;
-      this -> m_candidate_graduation_year = m_candidate_graduation_year;
-      this -> m_candidate_college_email = m_candidate_college_email;
-      this -> m_candidate_grade_standard_10 = m_candidate_grade_standard_10;
-      this -> m_candidate_grade_standard_12 = m_candidate_grade_standard_12;
-      this -> m_candidate_cgpa = m_candidate_cgpa;
-      this -> m_candidate_personal_email = m_candidate_personal_email;
-      this -> m_candidate_active_backlogs_count = m_candidate_active_backlogs_count;
-
-      // Default Value Initialisation
-
-      this -> m_candidate_url_github = "";
-      this -> m_candidate_url_gitlab = "";
-      this -> m_candidate_url_resume = "";
-      this -> m_candidate_url_twitter = "";
-      this -> m_candidate_url_codechef = "";
-      this -> m_candidate_url_linkedin = "";
-      this -> m_candidate_url_portfolio = "";
-      this -> m_candidate_url_hackerrank = "";
-      this -> m_candidate_url_hackerearth = "";
-      this -> m_candidate_url_interviewbit = "";
-      this -> m_candidate_placed_status = false;
-      this -> m_candidate_placed_company = "";
-      this -> m_candidate_placed_ctc = 0.0;
-      this -> m_candidate_preference_min_ctc = 0.0;
-
-    }
-
-    // Copy Constructor
-
-    Candidate(const Candidate &candidate) {
-
-      this -> m_candidate_id = candidate.m_candidate_id;
-      this -> m_candidate_name = candidate.m_candidate_name;
-      this -> m_candidate_gender = candidate.m_candidate_gender;
-      this -> m_candidate_age = candidate.m_candidate_age;
-      this -> m_candidate_degree = candidate.m_candidate_degree;
-      this -> m_candidate_branch = candidate.m_candidate_branch;
-      this -> m_candidate_graduation_year = candidate.m_candidate_graduation_year;
-      this -> m_candidate_college_email = candidate.m_candidate_college_email;
-      this -> m_candidate_grade_standard_10 = candidate.m_candidate_grade_standard_10;
-      this -> m_candidate_grade_standard_12 = candidate.m_candidate_grade_standard_12;
-      this -> m_candidate_cgpa = candidate.m_candidate_cgpa;
-      this -> m_candidate_personal_email = candidate.m_candidate_personal_email;
-      this -> m_candidate_active_backlogs_count = candidate.m_candidate_active_backlogs_count;
-      this -> m_candidate_url_github = candidate.m_candidate_url_github;
-      this -> m_candidate_url_gitlab = candidate.m_candidate_url_gitlab;
-      this -> m_candidate_url_resume = candidate.m_candidate_url_resume;
-      this -> m_candidate_url_twitter = candidate.m_candidate_url_twitter;
-      this -> m_candidate_url_codechef = candidate.m_candidate_url_codechef;
-      this -> m_candidate_url_linkedin = candidate.m_candidate_url_linkedin;
-      this -> m_candidate_url_portfolio = candidate.m_candidate_url_portfolio;
-      this -> m_candidate_url_hackerrank = candidate.m_candidate_url_hackerrank;
-      this -> m_candidate_url_hackerearth = candidate.m_candidate_url_hackerearth;
-      this -> m_candidate_url_interviewbit = candidate.m_candidate_url_interviewbit;
-      this -> m_candidate_placed_status = candidate.m_candidate_placed_status;
-      this -> m_candidate_placed_company = candidate.m_candidate_placed_company;
-      this -> m_candidate_placed_ctc = candidate.m_candidate_placed_ctc;
-      this -> m_candidate_preference_min_ctc = candidate.m_candidate_preference_min_ctc;
-      this -> m_candidate_preference_company = candidate.m_candidate_preference_company;
-
-    }
-
-    // Destructor
-
-    ~Candidate() {
-      cout << "Your Profile Has Been Successfully Deleted!" << endl;
-    }
-    
-    // Private & Protected Data Member Getters
 
     int getID() {
       return this -> m_candidate_id;
@@ -307,6 +199,22 @@ class Candidate {
       return this -> m_candidate_url_interviewbit;
     }
 
+    void setPlacedCompany(string m_candidate_placed_company) {
+      this -> m_candidate_placed_company = m_candidate_placed_company;
+    }
+
+    void setPlacedCTC(float m_candidate_placed_ctc) {
+      this -> m_candidate_placed_ctc = m_candidate_placed_ctc;
+    }
+
+    void setPrefCompany(vector<string> m_candidate_preference_company) {
+      this -> m_candidate_preference_company = m_candidate_preference_company;
+    }
+    
+    void setPrefMinCTC(float m_candidate_preference_min_ctc) {
+      this -> m_candidate_preference_min_ctc = m_candidate_preference_min_ctc; 
+    }
+    
     bool getPlacedStatus() {
       return this -> m_candidate_placed_status;
     }
@@ -320,6 +228,299 @@ class Candidate {
     }
     
     vector<string> getPrefCompany() {
+      return this -> m_candidate_preference_company;
+    }
+
+    float getPrefMinCTC() {
+      return this -> m_candidate_preference_min_ctc;
+    }
+
+    void setPlacedStatus(bool m_candidate_placed_status) {
+      this -> m_candidate_placed_status = m_candidate_placed_status;
+    }
+
+
+    
+    // Parameterised Default Constructor
+
+    Candidate(int m_candidate_id, string m_candidate_name, char m_candidate_gender, int m_candidate_age,
+              string m_candidate_degree, string m_candidate_branch, int m_candidate_graduation_year,
+              string m_candidate_college_email, float m_candidate_grade_standard_10,
+              float m_candidate_grade_standard_12, float m_candidate_cgpa, string m_candidate_personal_email,
+              int m_candidate_active_backlogs_count) { 
+
+      // Required Values
+
+      this -> m_candidate_id = m_candidate_id;
+      this -> m_candidate_name = m_candidate_name;
+      this -> m_candidate_gender = m_candidate_gender;
+      this -> m_candidate_age = m_candidate_age;
+      this -> m_candidate_degree = m_candidate_degree;
+      this -> m_candidate_branch = m_candidate_branch;
+      this -> m_candidate_graduation_year = m_candidate_graduation_year;
+      this -> m_candidate_college_email = m_candidate_college_email;
+      this -> m_candidate_grade_standard_10 = m_candidate_grade_standard_10;
+      this -> m_candidate_grade_standard_12 = m_candidate_grade_standard_12;
+      this -> m_candidate_cgpa = m_candidate_cgpa;
+      this -> m_candidate_personal_email = m_candidate_personal_email;
+      this -> m_candidate_active_backlogs_count = m_candidate_active_backlogs_count;
+
+      // Default Value Initialisation
+
+      this -> m_candidate_url_github = "";
+      this -> m_candidate_url_gitlab = "";
+      this -> m_candidate_url_resume = "";
+      this -> m_candidate_url_twitter = "";
+      this -> m_candidate_url_codechef = "";
+      this -> m_candidate_url_linkedin = "";
+      this -> m_candidate_url_portfolio = "";
+      this -> m_candidate_url_hackerrank = "";
+      this -> m_candidate_url_hackerearth = "";
+      this -> m_candidate_url_interviewbit = "";
+      this -> m_candidate_placed_status = false;
+      this -> m_candidate_placed_company = "";
+      this -> m_candidate_placed_ctc = 0.0;
+      this -> m_candidate_preference_min_ctc = 0.0;
+
+      
+
+    }
+
+    // Copy Constructor
+
+    Candidate(const Candidate &candidate) {
+
+      this -> m_candidate_id = candidate.m_candidate_id;
+      this -> m_candidate_name = candidate.m_candidate_name;
+      this -> m_candidate_gender = candidate.m_candidate_gender;
+      this -> m_candidate_age = candidate.m_candidate_age;
+      this -> m_candidate_degree = candidate.m_candidate_degree;
+      this -> m_candidate_branch = candidate.m_candidate_branch;
+      this -> m_candidate_graduation_year = candidate.m_candidate_graduation_year;
+      this -> m_candidate_college_email = candidate.m_candidate_college_email;
+      this -> m_candidate_grade_standard_10 = candidate.m_candidate_grade_standard_10;
+      this -> m_candidate_grade_standard_12 = candidate.m_candidate_grade_standard_12;
+      this -> m_candidate_cgpa = candidate.m_candidate_cgpa;
+      this -> m_candidate_personal_email = candidate.m_candidate_personal_email;
+      this -> m_candidate_active_backlogs_count = candidate.m_candidate_active_backlogs_count;
+      this -> m_candidate_url_github = candidate.m_candidate_url_github;
+      this -> m_candidate_url_gitlab = candidate.m_candidate_url_gitlab;
+      this -> m_candidate_url_resume = candidate.m_candidate_url_resume;
+      this -> m_candidate_url_twitter = candidate.m_candidate_url_twitter;
+      this -> m_candidate_url_codechef = candidate.m_candidate_url_codechef;
+      this -> m_candidate_url_linkedin = candidate.m_candidate_url_linkedin;
+      this -> m_candidate_url_portfolio = candidate.m_candidate_url_portfolio;
+      this -> m_candidate_url_hackerrank = candidate.m_candidate_url_hackerrank;
+      this -> m_candidate_url_hackerearth = candidate.m_candidate_url_hackerearth;
+      this -> m_candidate_url_interviewbit = candidate.m_candidate_url_interviewbit;
+      this -> m_candidate_placed_status = candidate.m_candidate_placed_status;
+      this -> m_candidate_placed_company = candidate.m_candidate_placed_company;
+      this -> m_candidate_placed_ctc = candidate.m_candidate_placed_ctc;
+      this -> m_candidate_preference_min_ctc = candidate.m_candidate_preference_min_ctc;
+      this -> m_candidate_preference_company = candidate.m_candidate_preference_company; 
+
+
+
+    }
+
+    // Destructor
+
+    // ~Candidate() {
+    //   cout << "Your Profile Has Been Successfully Deleted!" << endl;
+    // }
+    
+    // Private & Protected Data Member Getters
+
+    
+
+};
+
+
+
+struct Criteria
+{
+  float minCGPA;
+    float eligible_10th_grade;
+    float eligible_12th_grade;
+    vector<string> eligible_degrees;
+    vector<int> eligible_batches;
+    vector<string> eligible_branches;
+};
+    
+class Recruiter {
+
+  private:
+
+    // COMPANY Name and JOB Description (PRIVATE)
+
+    string company_name;                         // Company's Name
+    string job_profile;                          // Job Profile (STEP/INTERN/FULL TIME)
+    string job_location;                         // Job_Location (Bangalore/Hyderabad etc)
+    int duration;                                // In case of INTERNSHIP duration of the job
+    string perks;                                // Benefits of the job
+    int stipend;                                 // Per month Stipend
+    string job_description;                      // All about the Job
+    
+    // JOB Application Details
+    
+    Criteria Eligibility;
+    string application_process;                  // Details of all rounds
+    string application_open_date;                // Start date of application
+    string application_close_date;               // End date of application
+    string interview_date;                       // Date of the interveiw
+    int number_of_req;
+    int number_of_hired;
+
+    vector<Candidate> hiredCandidates;
+    
+    
+    public:
+    
+    //PARAMETERISED CONSTRUCTOR
+    
+    Recruiter(string company_name,string job_profile,string job_location,int duration , string perks,int stipend,
+    string application_process,string job_description, int number_of_req,Criteria Eligibility) {
+        
+    this -> company_name = company_name;                         
+    this -> job_profile = job_profile;                          
+    this -> job_location = job_location;                  
+    this -> duration = duration; 
+    this -> perks = perks;
+    this -> stipend = stipend;     
+    this -> application_process = application_process;
+    this -> job_description = job_description;    
+    this -> number_of_req = number_of_req;
+    this -> Eligibility = Eligibility;
+    
+    //Default value Intitialisation
+        
+    application_open_date="";          
+    application_close_date="";      
+    interview_date="";   
+    number_of_hired=0;              
+    }
+    
+    
+    string get_company_name(){
+        return company_name;
+    }      
+    
+    string get_job_profile(){
+        return job_profile;
+    }  
+       
+    
+    string get_job_location(){
+        return job_location;
+    }   
+    
+    void set_eligible_10th_grade(float eligible_10th_grade){
+        this -> Eligibility.eligible_10th_grade = Eligibility.eligible_10th_grade;
+    }
+
+    float get_eligible_10th_grade(){
+        return Eligibility.eligible_10th_grade;
+    }
+  
+    void set_eligible_12th_grade(float eligible_12th_grade){
+        this -> Eligibility.eligible_12th_grade = Eligibility.eligible_12th_grade;
+    }
+
+    float get_eligible_12th_grade(){
+        return Eligibility.eligible_12th_grade;
+    }
+  
+    void set_minCGPA(float minCGPA){
+        this -> Eligibility.minCGPA = Eligibility.minCGPA;
+    }
+
+    float get_minCGPA(){
+        return Eligibility.minCGPA;
+    }
+    
+    vector<string> set_eligible_degrees(string eligible_degree){
+      return Eligibility.eligible_degrees;    
+    } 
+  
+    vector<string> get_eligible_degrees(){
+    return this -> Eligibility.eligible_degrees = Eligibility.eligible_degrees;    
+    }
+    
+    void set_eligible_batches(vector<int> eligible_batches){
+        this -> Eligibility.eligible_batches = Eligibility.eligible_batches;
+    }  
+
+    vector<int> get_eligible_batches(){
+        return Eligibility.eligible_batches;
+    }  
+    
+    void set_eligible_branches(vector<string> eligible_branches){
+        this -> Eligibility.eligible_branches = Eligibility.eligible_branches;
+    }   
+
+    vector<string> get_eligible_branches(){
+        return Eligibility.eligible_branches;
+    }    
+    
+    int get_duration(){
+        return duration;
+    } 
+    
+    string get_perks(){
+        return perks;
+    }
+    
+    void set_stipend(int value){
+      this->stipend = value;
+    }
+
+    int get_stipend(){
+        return this->stipend;
+    }   
+    
+    string get_application_process(){
+        return application_process;
+    } 
+    
+    string get_job_description(){
+        return job_description;
+    }
+    
+    void set_application_open_date(string application_open_date){
+        this -> application_open_date = application_open_date;
+    }
+    
+    
+    string get_application_open_date(){
+        return application_open_date;
+    }     
+    
+    void set_application_close_date(string application_close_date){
+        this -> application_close_date = application_close_date;
+    }
+    
+    string get_application_close_date(){
+        return application_close_date;
+    }
+    
+    void set_interveiw_date(string interview_date){
+        this -> interview_date = interview_date;
+    }
+    
+    string get_interveiw_date(){
+        return interview_date;
+    }
+  
+    //Behaviour functions
+  
+    vector<Candidate> hireCandidates(vector<Candidate> ranklist) {
+        for(int i=0;i<min(int(ranklist.size()), int(number_of_req)); i++) {
+            hiredCandidates.push_back(ranklist[i]);
+            number_of_hired++;
+        }
+        return hiredCandidates;
+    }         
+    
       return this -> m_candidate_preference_company;
     }
 
@@ -383,7 +584,7 @@ class Coordinator : public Candidate {
     void addCompany(int m_coordinator_companies_id,
                     string m_coordinator_companies_name, 
                     int m_coordinator_companies_candidate_total_needed,
-                    int m_coordinator_companies_candidate_total_fulfilled,
+                    // int m_coordinator_companies_candidate_total_fulfilled,
                     vector<int> m_coordinator_companies_candidate_graduation_year,
                     vector<string> m_coordinator_companies_candidate_branch,
                     float m_coordinator_companies_candidate_grade_standard_10,
@@ -393,7 +594,7 @@ class Coordinator : public Candidate {
       this -> m_coordinator_companies_id.push_back(m_coordinator_companies_id);
       this -> m_coordinator_companies_name.push_back(m_coordinator_companies_name);
       this -> m_coordinator_companies_candidate_total_needed.push_back(m_coordinator_companies_candidate_total_needed);
-      this -> m_coordinator_companies_candidate_total_fulfilled.push_back(m_coordinator_companies_candidate_total_fulfilled);
+      // this -> m_coordinator_companies_candidate_total_fulfilled.push_back(m_coordinator_companies_candidate_total_fulfilled);
       this -> m_coordinator_companies_candidate_graduation_year.push_back(m_coordinator_companies_candidate_graduation_year);
       this -> m_coordinator_companies_candidate_grade_standard_10.push_back(m_coordinator_companies_candidate_grade_standard_10);
       this -> m_coordinator_companies_candidate_grade_standard_12.push_back(m_coordinator_companies_candidate_grade_standard_12);
