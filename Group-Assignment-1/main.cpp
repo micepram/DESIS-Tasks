@@ -521,13 +521,62 @@ class Recruiter {
         return hiredCandidates;
     }         
     
-      return this -> m_candidate_preference_company;
+    vector<Candidate> getEligibleCandidates(vector<Candidate> candidate_list, vector<int> candidate_graduation_year, 
+                                      vector<string> canidate_branch, float candidate_grade_standard_10, 
+                                      float candidate_grade_standard_12, vector<string> candidate_degree) {
+      
+      vector<Candidate> eligible_candidate_list;
+      for(Candidate c : candidate_list) {
+        int criteria_checks = 0;
+        for(auto & cgy : candidate_graduation_year){
+            if(cgy == c.getGraduationYear()){
+                criteria_checks++;
+                break;
+            }     
+        }
+        for(auto & cb : canidate_branch){
+            if(cb == c.getBranch()){
+              criteria_checks++;
+              break;
+          }
+        }
+        for(auto & cd : candidate_degree){
+            if(cd == c.getDegree()){
+              criteria_checks++;
+              break;
+            }
+        }
+        if(c.getGradeStandard10() >= candidate_grade_standard_10){
+            criteria_checks++;
+        }
+        if(c.getGradeStandard12() >= candidate_grade_standard_12){
+            criteria_checks++;
+        }
+        
+        if(criteria_checks==5){
+            eligible_candidate_list.push_back(c);
+        }
+        else continue;
+      } 
+      return eligible_candidate_list;
     }
 
-    float getPrefMinCTC() {
-      return this -> m_candidate_preference_min_ctc;
+
+    vector<Candidate> BlacklistedCandidates(vector<Candidate> totalCandidates, vector<Candidate> eligibleCandidates){
+      vector<Candidate> blacklisted;
+        for(auto ts : totalCandidates){
+          bool selected = false;
+          for(auto es : eligibleCandidates){
+            if(ts.getName() == es.getName()){
+              selected = true;
+            }
+          }
+          if(!selected) blacklisted.push_back(ts);
+        }
+      return blacklisted;
     }
 
+    
 };
 
 class Coordinator : public Candidate {
@@ -602,8 +651,16 @@ class Coordinator : public Candidate {
 
     }
 
-    void setCandidatePlaced(vector<Candidate> candidate_list, int candidate_id, float candidate_ctc) {
+    void setCandidatePlaced(vector<Candidate> candidate_list, Recruiter company) {
       
+      for(auto candidate : candidate_list){
+        candidate.setPlacedCompany(company.get_company_name());
+        candidate.setPlacedCTC(company.get_stipend());
+        candidate.setPlacedStatus(true);
+
+      }
+      cout<< "coordinator "<< this->getName()<<" has set selected-candidates' placement details! \n";
+
 
       // TODO (FIX ERRORS)
 
@@ -613,33 +670,19 @@ class Coordinator : public Candidate {
 
     } // ask pramika for expalnation .. 
 
-    vector<Candidate> getEligibleCandidates(vector<Candidate> candidate_list, vector<int> candidate_graduation_year, 
-                                      vector<string> canidate_branch, float candidate_grade_standard_10, 
-                                      float candidate_grade_standard_12, vector<string> candidate_degree) {
-      
-      vector<Candidate> eligible_candidate_list;
-      for(Candidate c : candidate_list) {
-        bool check = true;
-        for(auto & cgy : candidate_graduation_year)
-          if(cgy == c.getGraduationYear())
-            check = false;
-        for(auto & cb : canidate_branch)
-          if(cb == c.getBranch())
-            check = false;
-        for(auto & cd : candidate_degree)
-          if(cd == c.getDegree())
-            check = false;
-        if(candidate_grade_standard_10 < c.getGradeStandard10())
-          check = false;
-        if(candidate_grade_standard_12 < c.getGradeStandard12())
-          check = false;
-        if(check == true)
-          eligible_candidate_list.push_back(c);
-      } 
-      return eligible_candidate_list;
-    }
 
-    void setCandidateBlacklisted(vector<Candidate> candidate_list, int candidate_id) {
+
+  void setCandidateBlacklisted(vector<Candidate> BlacklistedCandidates, Recruiter company){
+    for(auto candidate : BlacklistedCandidates){
+      candidate.setPlacedCompany("Blacklisted");
+      candidate.setPlacedCTC(-1.0);
+      candidate.setPlacedStatus(false);
+    }
+    cout<< "coordinator "<< this->getName()<<" has set blacklisted-candidates' details! \n";
+  } 
+    
+
+    // void setCandidateBlacklisted(vector<Candidate> candidate_list, int candidate_id) {
       // TODO (FIX ERRORS) 
       
 
@@ -647,7 +690,11 @@ class Coordinator : public Candidate {
       // candidate_list[candidate_id].setPlacedCTC(-1.0);
       // candidate_list[candidate_id].setPlacedStatus(true);
      
-      // // ask pramika for expllll.. 
-    }
+      // ask pramika for expllll.. 
+    
 
 };
+
+
+
+
