@@ -9,8 +9,8 @@ struct Criteria
 	float minCGPA;
     float eligible_10th_grade;
     float eligible_12th_grade;
-    string eligible_degree;
-    vector<string> eligible_batches;
+    vector<string> eligible_degree;
+    vector<int> eligible_gy;
     vector<string> eligible_branches;
 };
     
@@ -75,8 +75,7 @@ class Recruiter {
     string get_job_profile(){
         return job_profile;
     }  
-       
-    
+  
     string get_job_location(){
         return job_location;
     }   
@@ -104,30 +103,20 @@ class Recruiter {
     float get_minCGPA(){
         return Eligibility.minCGPA;
     }
-    
-<<<<<<< HEAD
-    string set_eligible_degree(string eligible_degree){
-	return Eligibility.eligible_degree;    
+    void set_eligible_degree(vector<string> eligible_degree){
+      this -> Eligibility.eligible_degrees = Eligibility.eligible_degree;
     }	
 	
-    void get_eligible_degree(){
-	this -> Eligibility.eligible_degree = Eligibility.eligible_degree;    
-=======
-    string set_eligible_degree(string eligible_degrees){
-	return Eligibility.eligible_degrees;    
-    }	
-	
-    void get_eligible_degree(){
-	this -> Eligibility.eligible_degrees = Eligibility.eligible_degree;    
->>>>>>> 93a671a04078d78a04e8abb7d0cad38cd87718cd
+    vector<string> get_eligible_degree(){
+	    return Eligibility.eligible_degree; 
     }
     
-    void set_eligible_batches(vector<int> eligible_batches){
-        this -> Eligibility.eligible_batches = Eligibility.eligible_batches;
+    void set_eligible_gy(vector<int> eligible_gy){
+        this -> Eligibility.eligible_gy = Eligibility.eligible_gy;
     }  
 
-    vector<string> get_eligible_batches(){
-        return Eligibility.eligible_batches;
+    vector<string> get_eligible_gy(){
+        return Eligibility.eligible_gy;
     }  
     
     void set_eligible_branches(vector<string> eligible_branches){
@@ -175,11 +164,11 @@ class Recruiter {
         return application_close_date;
     }
     
-    void set_interveiw_date(string interview_date){
+    void set_interview_date(string interview_date){
         this -> interview_date = interview_date;
     }
     
-    string get_interveiw_date(){
+    string get_interview_date(){
         return interview_date;
     }
   
